@@ -1,0 +1,13 @@
+{
+  "id": "anshukp",
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMZIHUQCMveB2fiYKjAQQUASKn4nE4d63XOjoP1Hv+YwIPbH3sQiAc9k+sZ7zqfL6TlDq1uKlto6CL6ugLq1MpU/UvXz+bWeAMNWcnYrbAz+XEOxPbBV6rvJI8ZUVidDSuUexSVBdgj6HmmS5w/2GmPKcCvXSU8hShwN6k7eWZjS2GrMFVOTxYe3VlLwgLkVx2lX0lZy5PjYTr9iUCxA7OI4+zAkLL3qLJHyw5D34OlZser6zUSHA9n1dyh/W+v+2qxUDwSCEWkS//dzZDEhOkB/1OPr3tQ1wEAj7V7X1s8wD9uiyrKSZC7tHdOfiukCgC68JcTwB6lmSaBhlfBLr9 anshukp@anshukp-ub"
+  ],
+  "groups": [
+    "sysadmin"
+  ],
+    "emails": ["anshukp@juniper.net"],
+  "shell": "/bin/bash",
+  "comment": "Anshuk Pandey",
+  "vim": true
+}

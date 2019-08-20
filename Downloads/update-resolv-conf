@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Set bash delimeter to be line break
+IFS=$'\n'
+
+# VPN DNS Server
+VPNDNS='172.31.0.2 208.67.222.222'
+OS=$(uname -s)
+
+update_dns_mac(){
+  for adapter in $adapters
+  do
+        echo updating dns for $adapter
+        dnssvr=(`networksetup -getdnsservers $adapter`)
+
+        if [ $dnssvr != $VPNDNS ]; then
+                # set dns server to the vpn dns server
+                networksetup -setdnsservers $adapter $VPNDNS
+                else
+                # revert back to DHCP assigned DNS Servers
+                networksetup -setdnsservers $adapter empty
+        fi
+  done
+}
+
+
+case $OS in
+Darwin)
+    update_dns_mac
+    ;;
+Linux)
+    /etc/openvpn/update-resolv-conf $@
+    ;;
+esac
