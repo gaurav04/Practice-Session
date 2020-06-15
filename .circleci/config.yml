@@ -13,9 +13,11 @@ jobs:
             sudo mkdir -p app/static app/templates 
             cp -r init.py app/
             cp -r views.py app/
+      - run:  
           name: Build Docker Image
           command: |
            docker build -t pytest .
+      - run:     
           name: Create docker container
           command: |
            docker run -d -p 56733:80 --name=pyapp pytest
