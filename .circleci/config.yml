@@ -9,6 +9,7 @@ jobs:
           name: Create Initialisatiion script
           command: |
             sudo mkdir -p app/static app/templates
+            sudo apt-get update
             sudo apt install git-all
             git clone https://github.com/ANSHUKPANDEY/Practice-Session.git 
             sudo cp -r pyapp/init.py app/
