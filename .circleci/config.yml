@@ -17,7 +17,7 @@ jobs:
       - run:  
           name: Build Docker Image
           command: |
-           docker build -t pytest .
+           docker build -t pytest /pyapp/Dockerfile
       - run:     
           name: Create docker container
           command: |
