@@ -1,0 +1,23 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
+    steps:
+      - checkout
+      - run:
+          name: Create Initialisatiion script
+          command: |
+            sudo mkdir /var/www/TestApp
+            cd /var/www/TestApp
+            sudo mkdir -p app/static app/templates 
+            cp -r init.py app/
+            cp -r views.py app/
+          name: Build Docker Image
+          command: |
+           docker build -t pytest .
+          name: Create docker container
+          command: |
+           docker run -d -p 56733:80 --name=pyapp pytest
+
+
