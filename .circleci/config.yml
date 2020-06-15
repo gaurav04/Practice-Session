@@ -8,8 +8,6 @@ jobs:
       - run:
           name: Create Initialisatiion script
           command: |
-            mkdir /var/www/TestApp
-            cd /var/www/TestApp
             mkdir -p app/static app/templates 
             cp -r init.py app/
             cp -r views.py app/
