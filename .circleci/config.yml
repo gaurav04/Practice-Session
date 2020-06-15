@@ -8,9 +8,9 @@ jobs:
       - run:
           name: Create Initialisatiion script
           command: |
-            sudo mkdir /var/www/TestApp
+            mkdir /var/www/TestApp
             cd /var/www/TestApp
-            sudo mkdir -p app/static app/templates 
+            mkdir -p app/static app/templates 
             cp -r init.py app/
             cp -r views.py app/
       - run:  
