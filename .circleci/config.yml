@@ -8,9 +8,10 @@ jobs:
       - run:
           name: Create Initialisatiion script
           command: |
-            mkdir -p app/static app/templates 
-            cp -r init.py app/
-            cp -r views.py app/
+            mkdir -p app/static app/templates
+            git clone https://github.com/ANSHUKPANDEY/Practice-Session.git 
+            cp -r pyapp/init.py app/
+            cp -r pyapp/views.py app/
       - run:  
           name: Build Docker Image
           command: |
